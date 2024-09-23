@@ -45,7 +45,7 @@ header {
 
 header a {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
 
 h1 {
@@ -57,11 +57,12 @@ h1 {
 
 #menu {
     font-size: 110%;
-    letter-spacing:4px;
+    letter-spacing: 4px;
     list-style: none;
 }
-#menu > li {
-    margin:1em;
+
+#menu>li {
+    margin: 1em;
 
 }
 
@@ -70,27 +71,32 @@ h1 {
 
 
 }
+
 /* Navbar styles with dropdown toggle*/
 nav {
     position: absolute;
     background-color: #ffffff;
-    width:100%;
+    width: 100%;
     left: 0;
     padding: 0 1rem;
-    box-shadow:0 2px 2px #252525 ;
+    box-shadow: 0 2px 2px #252525;
     display: none;
-    top:100%;
+    top: 100%;
 }
+
 /*nav toggle */
 #nav-toggle:checked~nav {
-display: block;
+    display: block;
 }
+
 #nav-toggle {
     display: none;
 }
+
 .nav-toggle-label {
     font-size: 2rem;
 }
+
 /* main */
 main {
     background-color: lightblue;
@@ -102,5 +108,31 @@ main {
 /* footer */
 footer {
     background-color: orange;
+
+}
+
+/* media query for tablets and larger */
+@media screen and (min-width:768px) {
+
+/* Header */
+nav {
+    display: block;
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 1rem;
+}
+
+#menu {
+    display: flex;
+}
+
+#menu > li {
+    padding-left: 1rem;
+}
+
+.nav-toggle-label {
+    display: none;
+}
 
 }
