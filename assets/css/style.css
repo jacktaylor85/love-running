@@ -105,10 +105,22 @@ main {
 
 /* footer */
 footer {
-    background-color: orange;
+    background-color: #ffffff;
 
 }
-
+/* footer */
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+#social-networks i {
+    font: size 160%;
+    padding: 5%;
+    color: #3a3a3a;
+}
 /* media query for tablets and larger */
 @media screen and (min-width:768px) {
 
@@ -142,6 +154,7 @@ nav {
 main {
     margin-top: 79px;
 }
+
 }
 @media screen and (min-width: 992px) {
     #menu a:hover{
