@@ -18,6 +18,7 @@
     box-sizing: border-box;
 }
 
+
 /* General styles */
 body {
     min-height: 100vh;
@@ -28,13 +29,20 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-/* header */
-header {
-    background-color: lightcoral;
-}
+    /* header */
+    header {
+        background-color: #ffffff;
+        padding: 0 1rem;
+        position: fixed;
+        z-index: 99;
+        width:100%;
+        box-shadow: 0 2px 2px #3a3a3a;
+    }
+
+
 
 h1 {
-    font-family: 'oswald',sans-serif;
+    font-family: 'oswald', sans-serif;
 }
 
 /* main */
