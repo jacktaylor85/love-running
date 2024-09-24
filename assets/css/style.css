@@ -118,6 +118,13 @@ main {
     position:absolute;
     bottom: 30px;
     width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+#cover-text > h2, #cover-text > h3 {
+    color: #ffffff;
 }
 
 /* footer */
@@ -170,6 +177,11 @@ nav {
 /* main content */
 main {
     margin-top: 79px;
+}
+
+#cover-text {
+    width: 300px;
+    right:50px;
 }
 
 }
