@@ -30,7 +30,9 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -102,29 +104,11 @@ main {
     flex: 1 0 auto;
     margin-top: 47px;
 }
-section #reasons {
-    width: 90%;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-}
-#reasons > h2 {
-    font-size: 280%;
-    text-align: center;
-}
-hr {
-    border-top: 1px solid #3a3a3a;
-    margin: 5px 0;
-}
-#benefits-physical-p {
-    padding:0 20px;
-    
-}
+
 /* Hero */
 #hero {
     height: 600px;
-    width:100%;
+    width: 100%;
     background: url(../Images/hero-image.webp) no-repeat center center/cover;
     position: relative;
 }
@@ -133,7 +117,7 @@ hr {
     /* final rgba value sets the opacity */
     background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
-    position:absolute;
+    position: absolute;
     bottom: 30px;
     width: 80%;
     min-height: 200px;
@@ -141,8 +125,50 @@ hr {
     padding-left: 10px;
 }
 
-#cover-text > h2, #cover-text > h3 {
+#cover-text>h2,
+#cover-text>h3 {
     color: #ffffff;
+}
+
+#reasons {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#reasons h2 {
+    font-size: 280%;
+    text-align: center;
+}
+
+hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+#benefits-physical-p {
+    padding: 0 20px;
+
+}
+
+#circle-cover-bg {
+    background: url(../Images/reasons-image.webp) no-repeat top center / cover;
+    height: 90vw;
+    width: 90vw;
+    margin-bottom: 20px;
+
+    /*makes the square a circle*/
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* footer */
@@ -150,6 +176,7 @@ footer {
     background-color: #ffffff;
 
 }
+
 /* footer */
 #social-networks {
     text-align: center;
@@ -158,54 +185,103 @@ footer {
     justify-content: space-evenly;
     list-style-type: none;
 }
+
 #social-networks i {
     font: size 160%;
     padding: 5%;
     color: #3a3a3a;
 }
+
 /* media query for tablets and larger */
 @media screen and (min-width:768px) {
 
-/* Header */
-nav {
-    display: block;
-    position: relative;
-    box-shadow: none;
-    width: fit-content;
-    padding-right: 1rem;
-}
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
 
-#menu {
-    display: flex;
-}
+    #menu {
+        display: flex;
+    }
 
-#menu > li {
-    padding-left: 1rem;
-}
+    #menu>li {
+        padding-left: 1rem;
+    }
 
-.nav-toggle-label {
-    display: none;
-}
+    .nav-toggle-label {
+        display: none;
+    }
 
-#logo {
-    font-size: 280%;
-    line-height: 75px;
-    margin: 0 0.5rem;
-}
-/* main content */
-main {
-    margin-top: 79px;
-}
-
-#cover-text {
-    width: 300px;
-    right:50px;
-}
-
-}
-@media screen and (min-width: 992px) {
-    #menu a:hover{
-        border-bottom: 1px solid #3a3a3a;
-        
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
     }
 }
+
+    /* main content */
+    main {
+        margin-top: 79px;
+    }
+
+    /* hero*/
+    #cover-text {
+        width: 300px;
+        right: 50px;
+    }
+
+    /* reasons */
+    #benefits-physical,
+    #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #benefits-physical>div,
+    #benefits-mental>div {
+        width: 75%;
+    }
+
+    #benefits-mental>div {
+        text-align: end;
+        align-self: flex-end;
+    }
+
+    @media screen and (min-width: 992px) {
+        #menu a:hover {
+            border-bottom: 1px solid #3a3a3a;
+
+        }
+    }
+
+    @media screen and (min-width:1200) {
+        #benefits {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #benefits > div {
+            flex: 1;
+        }
+
+        #benefits-image {
+            order: 0;
+        }
+
+        #benefits-mental {
+            order: 1;
+        }
+
+        #benefits-mental > div {
+            align-self: flex-start;
+        }
+
+        #benefits-physical > div {
+            align-self: flex-end;
+        }
+    }
