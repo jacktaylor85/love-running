@@ -1,31 +1,19 @@
-/* Font Styles */
-.oswald {
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-}
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-.lato-light {
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
-
-/* Asterrisk Wildcard selector to override default styles added by the browser */
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-
 /* General styles */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /*generic project styles*/
+    /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
@@ -33,13 +21,13 @@ body {
 h1,
 h2,
 h3 {
-    font-family: 'oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
 }
 
-/* header */
+/* Header */
 header {
     background-color: #ffffff;
     padding: 0 1rem;
@@ -64,15 +52,14 @@ header a {
 }
 
 #menu>li {
-    margin: 1em;
-
+    margin-bottom: 1em;
 }
 
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* Navbar styles with dropdown toggle*/
+/* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -84,7 +71,7 @@ nav {
     top: 100%;
 }
 
-/*nav toggle */
+/* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
@@ -97,24 +84,23 @@ nav {
     font-size: 2rem;
 }
 
-/* main */
+/* Main content */
 main {
-
-    /*make main element take up any surplus space to push footer down*/
+    /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
 }
 
-/* Hero */
+/* Hero section */
 #hero {
     height: 600px;
     width: 100%;
-    background: url(../Images/hero-image.webp) no-repeat center center/cover;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
     position: relative;
 }
 
 #cover-text {
-    /* final rgba value sets the opacity */
+    /* Final rgba value sets the opacity so it is semi-transparent */
     background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
     position: absolute;
@@ -130,36 +116,39 @@ main {
     color: #ffffff;
 }
 
+/* Reasons section */
 #reasons {
     width: 90%;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+    margin: 20px auto;
 }
 
 #reasons h2 {
-    font-size: 280%;
+    margin-bottom: 20px;
     text-align: center;
+    font-size: 280%;
 }
 
-hr {
+#benefits-physical>div,
+#benefits-mental>div {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#benefits hr {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
 
-#benefits-physical-p {
-    padding: 0 20px;
-
-}
-
 #circle-cover-bg {
-    background: url(../Images/reasons-image.webp) no-repeat top center / cover;
+    background: url('../images/reasons-image.webp') no-repeat top center / cover;
     height: 90vw;
     width: 90vw;
     margin-bottom: 20px;
-
-    /*makes the square a circle*/
+    /* Makes the square image into a circle */
     border-radius: 50%;
     max-width: 300px;
     max-height: 300px;
@@ -171,13 +160,7 @@ hr {
     justify-content: center;
 }
 
-/* footer */
-footer {
-    background-color: #ffffff;
-
-}
-
-/* footer */
+/* Footer */
 #social-networks {
     text-align: center;
     padding: 20px 0;
@@ -187,13 +170,13 @@ footer {
 }
 
 #social-networks i {
-    font: size 160%;
+    font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
 }
 
-/* media query for tablets and larger */
-@media screen and (min-width:768px) {
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
 
     /* Header */
     nav {
@@ -221,20 +204,20 @@ footer {
         line-height: 75px;
         margin: 0 0.5rem;
     }
-}
 
-    /* main content */
+    /* Main content */
     main {
+        /* Push main content down to accommodate larger header */
         margin-top: 79px;
     }
 
-    /* hero*/
+    /* Hero */
     #cover-text {
         width: 300px;
         right: 50px;
     }
 
-    /* reasons */
+    /* Reasons section */
     #benefits-physical,
     #benefits-mental {
         display: flex;
@@ -252,36 +235,39 @@ footer {
         align-self: flex-end;
     }
 
-    @media screen and (min-width: 992px) {
-        #menu a:hover {
-            border-bottom: 1px solid #3a3a3a;
+}
 
-        }
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+    }
+}
+
+@media screen and (min-width: 1200px) {    
+    /* Reasons section */
+    #benefits {
+        display: flex;
+        flex-direction: row;
     }
 
-    @media screen and (min-width:1200) {
-        #benefits {
-            display: flex;
-            flex-direction: row;
-        }
-
-        #benefits > div {
-            flex: 1;
-        }
-
-        #benefits-image {
-            order: 0;
-        }
-
-        #benefits-mental {
-            order: 1;
-        }
-
-        #benefits-mental > div {
-            align-self: flex-start;
-        }
-
-        #benefits-physical > div {
-            align-self: flex-end;
-        }
+    #benefits > div {
+        flex: 1;
     }
+
+    #benefits-image {
+        order: 0
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental > div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical > div {
+        align-self: flex-end;
+    }
+}
